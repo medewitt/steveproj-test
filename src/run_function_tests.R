@@ -12,4 +12,6 @@ log_info("Running Function Tests")
 
 out <- run_test_dir(here::here("tests"), verbose=0)
 
+as.data.frame.matrix(summary(out))
+
 output_validator(out)

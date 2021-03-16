@@ -32,7 +32,7 @@ output_validator <- function(object, validation_yml = NULL){
   }
 
   for(i in 1:nrow(confront_results)){
-    if(confront_results[i,]$failures>0){
+    if(confront_results[i,]$fails==0){
       log_info(glue::glue_data(.x = confront_results[i,],
                                "{name}; passed = {passes}; failures = {fails}"))
     } else {

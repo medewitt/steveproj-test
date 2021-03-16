@@ -37,3 +37,14 @@ data/Mods.rds: data/Data.rds R/2-analysis.R
 
 data/Data.rds: R/1-prep.R
 	Rscript -e 'source("R/1-prep.R")'
+
+# Run Unit Tests on Code
+test:
+	Rscript -e 'source("src/run_function_tests.R")'
+
+# Scan Log Files
+
+scan:
+	grep 'ERROR' logs/analysis.log
+
+.PHONY: test scan clean
