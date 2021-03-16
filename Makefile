@@ -10,7 +10,8 @@ all: $(OUTPUTS)
 refs: inst/refs.bib
 
 clean:
-	rm -f $(OUTPUTS) $(RDS)
+	rm -rf $(OUTPUTS) $(RDS)
+	rm -rf doc/
 
 # Specialty sourcing for each output
 
