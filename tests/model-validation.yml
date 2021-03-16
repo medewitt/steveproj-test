@@ -1,0 +1,12 @@
+rules:
+-
+  expr: (!is.na(immigsent))
+  name: checkna
+  label: Check For Missing
+  description: |
+    Checking to ensure that missing data are not
+- expr: agea > 0
+  name: negages
+  label: Negative ages
+  description: |
+    Checking for negative ages
