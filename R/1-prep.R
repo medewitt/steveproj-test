@@ -4,7 +4,7 @@ library(stevedata) # has the raw data
 library(tidyverse) # used for most everything
 library(validate)
 library(logger)
-
+source(here::here("src", "output_validator.R"))
 log_appender(appender_file(file = here::here("logs","analysis.log")))
 # "load" the data ----
 # Note: in your case, you can load raw data from wherever, even outside the project directory
@@ -23,24 +23,9 @@ ESS9GB %>%
 
 # checking ----------------------------------------------------------------
 log_info("Import Data Validation {Sys.info()['sysname'][[1]]}" )
-validation_template <- here::here("tests", "data-validation.yml")
 
-v <- validator(.file = validation_template)
-
-confront_data <- confront(ESS9GB, v)
-
-confront_results <- summary(confront_data)
-
-for(i in 1:nrow(confront_results)){
-  if(confront_results[i,]$fails>0){
-    log_info(glue::glue_data(.x = confront_results[i,],
-                             "{name}; passed = {passes}; failures = {fails}"))
-  } else {
-    log_error(glue::glue_data(.x = confront_results[i,],
-                             "{name}; passed = {passes}; failures = {fails}"))
-  }
-
-}
+## Wrapping the validation into a function available in src
+output_validator(ESS9GB, here::here("tests", "data-validation.yml"))
 
 # ^ Notice that I "finished" my data prep into a new object, titled "Data"
 # Now: I save it to data/Data.rds

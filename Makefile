@@ -11,7 +11,7 @@ refs: inst/refs.bib
 
 clean:
 	rm -rf $(OUTPUTS) $(RDS)
-	rm -rf doc/
+	rm -rf doc/*
 
 # Specialty sourcing for each output
 

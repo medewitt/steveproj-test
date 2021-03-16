@@ -4,6 +4,7 @@ library(tidyverse)
 library(modelr)
 library(validate)
 library(logger)
+source(here::here("src", "output_validator.R"))
 
 log_appender(appender_file(file = here::here("logs","analysis.log")))
 # Load stuff
@@ -27,24 +28,8 @@ log_info("Simulations Complete")
 
 
 # validate simulations for craziness ---------------------------------------
-validation_template <- here::here("tests", "model-validation.yml")
-
-v <- validator(.file = validation_template)
-
-confront_data <- confront(Sims$`SQI (Ideology)`, v)
-
-confront_results <- summary(confront_data)
-
-for(i in 1:nrow(confront_results)){
-  if(confront_results[i,]$fails>0){
-    log_info(glue::glue_data(.x = confront_results[i,],
-                             "{name}; passed = {passes}; failures = {fails}"))
-  } else {
-    log_error(glue::glue_data(.x = confront_results[i,],
-                              "{name}; passed = {passes}; failures = {fails}"))
-  }
-
-}
+## Wrapping the validation into a function available in src
+output_validator(Sims$`SQI (Ideology)`, here::here("tests", "model-validation.yml"))
 
 
 # save output -------------------------------------------------------------
