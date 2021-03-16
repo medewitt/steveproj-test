@@ -9,8 +9,10 @@
 #' @param object a data.frame, the object that you wish to confront
 #' @export
 
-output_validator <- function(object, validation_yml){
+output_validator <- function(object, validation_yml = NULL){
 
+
+  if(!is.null(validation_yml)){
   if(!file.exists(validation_yml)){
     stop(sprintf("%s does not exist"))
   }
@@ -22,9 +24,15 @@ output_validator <- function(object, validation_yml){
   confront_data <- confront(object, v)
 
   confront_results <- summary(confront_data)
+  } else if(class(object) %in% "tinytests"){
+    confront_results <- as.data.frame.matrix(summary(object))
+    confront_results$name <- rownames(confront_results)
+  } else {
+    stop("You have not passed a valid yaml or object")
+  }
 
   for(i in 1:nrow(confront_results)){
-    if(confront_results[i,]$fails>0){
+    if(confront_results[i,]$failures>0){
       log_info(glue::glue_data(.x = confront_results[i,],
                                "{name}; passed = {passes}; failures = {fails}"))
     } else {
