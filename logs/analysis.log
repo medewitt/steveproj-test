@@ -1,0 +1,70 @@
+INFO [2021-03-16 09:11:56] Import Data Validation Windows
+INFO [2021-03-16 09:15:22] Import Data Validation Windows
+INFO [2021-03-16 09:15:42] Import Data Validation Windows
+INFO [2021-03-16 09:20:41] cntrycheck; passed = 1905; failures = 0
+INFO [2021-03-16 09:20:41] editioncheck; passed = 1905; failures = 0
+INFO [2021-03-16 09:21:12] Data Saved
+INFO [2021-03-16 09:26:57] Import Data Validation Windows
+ERROR [2021-03-16 09:26:57] cntrycheck; passed = 1905; failures = 0
+ERROR [2021-03-16 09:26:57] editioncheck; passed = 1905; failures = 0
+INFO [2021-03-16 09:26:57] Data Saved
+INFO [2021-03-16 09:33:16] Running Simulations
+INFO [2021-03-16 09:33:16] Simulations Complete
+INFO [2021-03-16 09:33:31] Starting Analysis
+INFO [2021-03-16 09:33:31] Running Models
+INFO [2021-03-16 09:33:39] Models Completed
+INFO [2021-03-16 09:34:55] Running Simulations
+ERROR [2021-03-16 10:24:07] checkna; passed = 11000; failures = 0
+INFO [2021-03-16 10:24:07] negages; passed = 0; failures = 11000
+ERROR [2021-03-16 10:29:50] checkna; passed = 11000; failures = 0
+INFO [2021-03-16 10:29:50] negages; passed = 0; failures = 11000
+INFO [2021-03-16 10:29:51] Simulations Saved
+INFO [2021-03-16 10:39:34] Starting Analysis
+INFO [2021-03-16 10:39:34] Running Models
+INFO [2021-03-16 10:39:34] Models Completed
+INFO [2021-03-16 10:39:54] Running Simulations
+INFO [2021-03-16 10:39:56] Simulations Complete
+ERROR [2021-03-16 10:39:56] checkna; passed = 11000; failures = 0
+ERROR [2021-03-16 10:39:56] negages; passed = 11000; failures = 0
+INFO [2021-03-16 10:39:56] Simulations Saved
+ERROR [2021-03-16 10:58:47] cntrycheck; passed = 1905; failures = 0
+ERROR [2021-03-16 10:58:47] editioncheck; passed = 1905; failures = 0
+ERROR [2021-03-16 11:00:10] checkna; passed = 11000; failures = 0
+ERROR [2021-03-16 11:00:10] negages; passed = 11000; failures = 0
+INFO [2021-03-16 11:00:29] Import Data Validation Windows
+ERROR [2021-03-16 11:00:29] cntrycheck; passed = 1905; failures = 0
+ERROR [2021-03-16 11:00:29] editioncheck; passed = 1905; failures = 0
+INFO [2021-03-16 11:00:29] Data Saved
+INFO [2021-03-16 11:00:29] Starting Analysis
+INFO [2021-03-16 11:00:29] Running Models
+INFO [2021-03-16 11:00:29] Models Completed
+INFO [2021-03-16 11:00:32] Running Simulations
+INFO [2021-03-16 11:00:34] Simulations Complete
+ERROR [2021-03-16 11:00:34] checkna; passed = 11000; failures = 0
+ERROR [2021-03-16 11:00:34] negages; passed = 11000; failures = 0
+INFO [2021-03-16 11:00:34] Simulations Saved
+INFO [2021-03-16 11:01:35] Import Data Validation Windows
+ERROR [2021-03-16 11:01:35] cntrycheck; passed = 1905; failures = 0
+ERROR [2021-03-16 11:01:35] editioncheck; passed = 1905; failures = 0
+INFO [2021-03-16 11:01:35] Data Saved
+INFO [2021-03-16 11:01:35] Starting Analysis
+INFO [2021-03-16 11:01:35] Running Models
+INFO [2021-03-16 11:01:35] Models Completed
+INFO [2021-03-16 11:01:38] Running Simulations
+INFO [2021-03-16 11:01:41] Simulations Complete
+ERROR [2021-03-16 11:01:41] checkna; passed = 11000; failures = 0
+ERROR [2021-03-16 11:01:41] negages; passed = 11000; failures = 0
+INFO [2021-03-16 11:01:41] Simulations Saved
+ERROR [2021-03-16 11:33:04] test_output_validator.R; passed = 1; failures = 0
+ERROR [2021-03-16 11:33:04] Total; passed = 1; failures = 0
+INFO [2021-03-16 11:33:46] Running Function Tests
+ERROR [2021-03-16 11:33:46] test_output_validator.R; passed = 1; failures = 0
+ERROR [2021-03-16 11:33:46] Total; passed = 1; failures = 0
+INFO [2021-03-16 11:37:03] Running Function Tests
+INFO [2021-03-16 11:37:38] Running Function Tests
+INFO [2021-03-16 11:38:57] Running Function Tests
+ERROR [2021-03-16 11:39:00] test_output_validator.R; passed = 1; failures = 0
+ERROR [2021-03-16 11:39:00] Total; passed = 1; failures = 0
+INFO [2021-03-16 11:40:06] Running Function Tests
+INFO [2021-03-16 11:40:06] test_output_validator.R; passed = 1; failures = 0
+INFO [2021-03-16 11:40:06] Total; passed = 1; failures = 0
