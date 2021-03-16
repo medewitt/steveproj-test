@@ -1,0 +1,12 @@
+rules:
+-
+  expr: cntry == "GB"
+  name: cntrycheck
+  label: Check Country Code
+  description: |
+    Checking to ensure that only one country is included in these data
+- expr: edition == "1.2"
+  name: editioncheck
+  label: Check Edition Code
+  description: |
+    Checking to ensure that the survey is from the same vintage

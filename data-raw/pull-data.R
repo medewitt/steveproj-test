@@ -6,7 +6,7 @@ library(dplyr)
 
 
 # prep work to mimic a database -------------------------------------------
-#' Pull Data from a Database with Pre-made Query
+#' Pull Data from a Database with Premade Query
 #'
 #' Theoretically this work could be saved in another sql script for better
 #' clarity and just called.
