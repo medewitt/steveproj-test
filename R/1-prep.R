@@ -8,7 +8,7 @@ library(tidyverse) # used for most everything
 # For example, if you're analyzing ANES data, you're not ask to stick it in your project directory
 # If you can share the raw data, create a directory called "data-raw" in the main project directory
 # Then, load it from there.
-data(ESS9GB, package="stevedata")
+ESS9GB <- readRDS(here::here("data","ESS9GB.rds"))
 
 # "prep" the data ----
 # I can do anything I want here. I can recode things, transform variables, or whatever
